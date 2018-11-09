@@ -29,7 +29,7 @@
 	# Correr o Controlador
 	docker run -d --name 'Controler' --network ESLE_Network -it --ip 10.0.1.1 --mount source=ESLE_Volume,target=/containernet --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
 	ContainerID="$(docker ps -aqf 'name=Controler')"
-	docker cp ~/Desktop/MaxiNet.cfg "Controler":/containernet/"MaxiNet.cfg"
+	docker cp ~/Desktop/MaxiNet.cfg "Controler":/containernet/../etc/"MaxiNet.cfg"
 	docker cp ~/Desktop/InstallMaxiNet.sh "Controler":/containernet/"InstallMaxiNet.sh"
 	gnome-terminal -x bash -c "docker exec -it '$ContainerID' ./InstallMaxiNet.sh && cd /pox/ && python2 pox.py forwarding.l2_learning"
 
