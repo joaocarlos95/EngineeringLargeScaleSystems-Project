@@ -1,0 +1,70 @@
+
+ - Os testes foram executados num container, usando a imagem do containernet, que corria como Worker, e estava ligado ao FrontEndServer, que por sua vez, corria no localhost da VM.
+
+--------------------------------------------------------------------------------------------------------------
+
+	#Teste -> Verificar como como varia o débito com a variação da limitação do CPU, e comparar os valores obtidos com o valor teórico:
+		
+		- Ferramenta usada: iperf;
+		- Topologia usada: mn --topo=tree,depth=2,fanout=2 --link tc ;
+		- Iperf: testing TCP bandwidth between hosts ; 
+
+		1) 100% CPU: 
+
+			- Comandos: 
+
+				$  mn --host cfs,cpu=1 --topo=tree,depth=2,fanout=2 --link tc ;
+
+				#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+				$ iperf h1 h4 ;
+
+			- Resultados obtidos: ['9.84 Gbits/sec', '9.81 Gbits/sec']
+
+
+		2)50% CPU: 
+
+			- Comandos: 
+
+				#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+				$ iperf h1 h4 ;
+
+			- Resultados obtidos: ['8.15 Gbits/sec', '8.13 Gbits/sec']
+
+
+		3)25% CPU: 
+
+			- Comandos:
+
+				#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+				$ iperf h1 h4 ;	
+
+			- Resultados obtidos:  ['4.16 Gbits/sec', '4.15 Gbits/sec']
+
+
+		4)10% CPU: 
+
+			- Comandos: 
+
+				#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+				$ iperf h1 h4 ;
+
+			- Resultados obtidos:  ['1.63 Gbits/sec', '1.67 Gbits/sec']
+
+
+		5)5% CPU: 
+
+			- Comandos: 
+
+				#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+				$ iperf h1 h4 ;
+
+			- Resultados obtidos: ['805 Mbits/sec', '822 Mbits/sec'] 
+		
+		4)1% CPU: 
+
+			- Comandos: 
+
+				#Executar o teste  iperf (usando o caminho mais longo, o maior número de hops)
+				$ iperf h1 h4 ;
+
+			- Resultados obtidos: ['143 Mbits/sec', '151 Mbits/sec']  	

@@ -1,0 +1,135 @@
+
+- Os testes foram executados num container, usando a imagem do containernet, que corria como Worker, e estava ligado ao FrontEndServer, que por sua vez, corria no localhost da VM.
+
+--------------------------------------------------------------------------------------------------------------
+
+	# Teste nº1 -> Verificar como como varia o débito com o aumento de hosts na rede, usando topologias com apenas 1 hop, e comparar os valores obtidos com o valor teórico:
+		
+		-Ferramenta usada: Ping;
+		
+		- Iperf: testing TCP bandwidth between hosts ; 
+
+		1) Topologia com 1 Switch com 2PC's (hosts):
+
+			- Valor teórico do débito=10Mbits/s ;
+
+			- Comandos: 
+
+				#Criar a topologia, com um limite na largura de banda
+				$ mn --topo=single,2  --link tc,bw=10 ; 
+
+				#Executar o teste iperf
+				$ iperf h1 h2 ;
+
+			- Resultados obtidos: ['9.57 Mbits/sec', '10.1 Mbits/sec']
+
+
+		2) Topologia com 1 Swtich para 60 PC's (hosts):
+
+			- Valor teórico do débito=10Mbits/s ;
+
+			- Comandos:
+
+				#Criar a topologia, com um limite na largura de banda
+				$ mn --topo=single,60  --link tc,bw=10 ;
+
+				#Executar o teste iperf
+				$ iperf h1 h2 ;
+
+			- Resultados obtidos: ['9.56 Mbits/sec', '9.85 Mbits/sec']
+
+		3) Topologia com 1 Sitch com 120PC's (hosts):
+
+			- Valor teórico do débito=10Mbits/s ;
+
+			- Comandos: 
+
+				#Criar a topologia, com um limite na largura de banda
+				$ mn --topo=single,120  --link tc,bw=10 ;
+
+				#Executar o teste iperf
+				$ iperf h1 h2 ;
+
+			- Resultados obtidos: ['9.50 Mbits/sec', '9.77 Mbits/sec']
+
+
+		4) Topologia com 1 Switch com 200PC's: 
+
+			- Valor teórico do débito=10Mbits/s ;
+
+			- Comandos:
+
+				#Criar a topologia, com um limite na largura de banda
+				$ mn --topo=single,200  --link tc,bw=10 ;
+
+				#Executar o teste iperf
+				$ iperf h1 h2 ;
+
+			- Resultados obtidos: ['9.39 Mbits/sec', '9.63 Mbits/sec']
+
+	----------------------------------------------------------------------------------------------------------
+
+	# Teste nº2 -> Verificar como varia o débito com o aumentando do número de hops (de 1 para 2 e 3) com o aumento dos hosts e switches (ou seja, complexidade da rede, com o aumento dos hosts e switches (ou seja, complexidade da rede), e comparar os resultados obtidos com o aumento dos hosts e switches:
+			
+			- Ferramenta usada: Ping;
+
+			- Iperf: testing TCP bandwidth between hosts ; 
+
+			1) Tree, 2 hops, 2 bifurcações em cada hop: 
+
+				- Valor teórico do débito=10Mbits/s ;
+
+				- Comandos: 
+
+					#Criar a topologia, com um limite na largura de banda
+					$ mn --topo=tree,depth=2,fanout=2 --link tc,bw=10 ;
+
+					#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+					$ iperf h1 h4 ;
+
+				- Resultados obtidos: ['9.57 Mbits/sec', '10.1 Mbits/sec']
+
+
+			2) Tree, 2 hops, 6 bifurcações em cada hop: 
+
+				- Valor teórico do débito=10Mbits/s ;
+
+				- Comandos: 
+
+					#Criar a topologia, com um limite na largura de banda
+					$ mn --topo=tree,depth=2,fanout=6 --link tc,bw=10 ;
+
+					#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+					$ iperf h1 h7 ;
+
+				- Resultados obtidos: ['9.51 Mbits/sec', '9.85 Mbits/sec']
+
+			3) Tree, 2 hops, 10 bifurcações em cada hop: 
+
+				- Valor teórico do débito=10Mbits/s ;
+
+				- Comandos: 
+
+					#Criar a topologia, com um limite na largura de banda
+					$ mn --topo=tree,depth=2,fanout=10 --link tc,bw=10 ;
+
+					#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+					$ iperf h1 h11 ;
+
+				- Resultados obtidos: ['9.44 Mbits/sec', '9.79 Mbits/sec']
+
+
+			4) Tree, 2 hops, 20 bifurcações em cada hop: 
+
+				- Valor teórico do débito=10Mbits/s ;
+
+				- Comandos: 
+
+					#Criar a topologia, com um limite na largura de banda				
+					$ mn --topo=tree,depth=2,fanout=20 --link tc,bw=10 ;
+
+					#Executar o teste iperf (usando o caminho mais longo, o maior número de hops)
+					$ iperf h1 h21 ;
+
+				- Resultados obtidos: ['9.39 Mbits/sec', '9.71 Mbits/sec']
+

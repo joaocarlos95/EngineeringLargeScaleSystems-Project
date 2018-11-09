@@ -1,0 +1,133 @@
+
+ - Os testes foram executados num container, usando a imagem do containernet, que corria como Worker, e estava ligado ao FrontEndServer, que por sua vez, corria no localhost da VM.
+
+--------------------------------------------------------------------------------------------------------------
+
+	#Teste nº1 -> Verificar como como varia a latência com o aumento de hosts na rede, usando topologias com apenas 1 hop, e comparar os valores obtidos com o valor teórico:
+		
+		- Ferramenta usada: iperf;
+
+		1) 1 SW - 2PCs: 
+
+			- Valor teórico=40ms ;
+
+			- Comandos: 
+
+				$ mn --topo=single,2  --link tc,delay=10ms ;
+
+				#Executar o teste ping
+				$ h1 ping -c 20 h2 ;
+
+			- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19031ms
+								  rtt min/avg/max/mdev = 42.001/43.115/44.369/0.705 ms
+
+
+		2)1 SW - 60PCs: 
+
+			- Valor teórico=40ms ;
+
+			- Comandos: 
+
+				$ mn --topo=single,60  --link tc,delay=10ms ;
+
+				#Executar o teste ping
+				$ h1 ping -c 20 h2 ;
+
+			- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19037ms
+								  rtt min/avg/max/mdev = 41.490/43.245/44.367/0.743 ms
+
+
+		3)1 SW - 120PCs: 
+
+			- Valor teórico=40ms ;
+
+			- Comandos: 
+
+				$ mn --topo=single,120  --link tc,delay=10ms ;
+
+				#Executar o teste ping
+				$ h1 ping -c 20 h2 ;	
+
+			- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19040ms
+								  rtt min/avg/max/mdev = 42.265/43.591/44.333/0.587 ms
+
+
+		4)1 SW - 200PCs: 
+
+			- Valor teórico=40ms ;
+
+			- Comandos: 
+
+				$ mn --topo=single,200  --link tc,delay=10ms ;
+
+				#Executar o teste ping
+				$ h1 ping -c 20 h2 ;
+
+			- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19083ms
+								  rtt min/avg/max/mdev = 42.155/46.411/70.198/7.748 ms
+ 
+
+	#Teste nº2 ->  Verificar como varia a latênia, usando o ping, com o aumentando do número de hops (de 1 para 2 e 3) com o aumento dos hosts e switches (ou seja, complexidade da rede, com o aumento dos hosts e switches (ou seja, complexidade da rede), e comparar os resultados obtidos com o aumento dos hosts e switches:
+		
+			- Ferramenta usada: iperf;
+
+			1) Tree, 2 hops, 2 bifurcações em cada hop: 
+
+				- Valor teórico=80ms ;
+
+				- Comandos: 
+
+					$ mn --topo=tree,depth=2,fanout=2 --link tc,delay=10ms ;
+
+					#Executar o teste PING
+					$ h1 ping -c 20 h4 ;
+
+				- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19039ms
+									  rtt min/avg/max/mdev = 84.778/86.455/87.803/0.894 ms
+
+
+			2) Tree, 2 hops, 6 bifurcações em cada hop: 
+
+				- Valor teórico=80ms ;
+
+				- Comandos: 
+
+					$ mn --topo=tree,depth=2,fanout=6 --link tc,delay=10ms ;
+
+					#Executar o teste PING
+					$ h1 ping -c 20 h7 ;
+
+				- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19022ms
+									  rtt min/avg/max/mdev = 84.895/86.768/90.417/1.241 ms
+
+
+			3) Tree, 2 hops, 10 bifurcações em cada hop: 
+
+				- Valor teórico=80ms ;
+
+				- Comandos: 
+
+					$ mn --topo=tree,depth=2,fanout=10 --link tc,delay=10ms ;
+
+					#Executar o teste PING
+					$ h1 ping -c 20 h11 ;
+
+				- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19041ms
+									  rtt min/avg/max/mdev = 84.850/86.896/90.059/1.236 ms
+
+
+			4) Tree, 2 hops, 20 bifurcações em cada hop: 
+
+				- Valor teórico=80ms ;
+
+				- Comandos: 
+
+					$ mn --topo=tree,depth=2,fanout=20 --link tc,delay=10ms ;
+
+					#Executar o teste PING
+					$ h1 ping -c 20 h21 ;
+
+				- Resultados obtidos: 20 packets transmitted, 20 received, 0% packet loss, time 19038ms
+									  rtt min/avg/max/mdev = 85.793/87.118/88.532/0.823 ms
+				
+
