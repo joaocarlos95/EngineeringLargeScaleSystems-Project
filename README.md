@@ -9,13 +9,18 @@
 The main objective is to analyse and test a real distributed system with client-server architecture.
 
 This project has 2 parts:
-  1. 
+  1. The first part consists in analyse and testing the performance and scalability of the MaxiNet System
   2. 
   
 ### How to run:
 #### Project Part 1
 - Open a terminal and run the command ./StartUp.sh
-- Choose the number of workers
+- Choose the number of workers and a new terminal will be open
+- Complete the installation by answering Y to all questions
+- After all, you'll have open 1 terminal for the Controller, 1 for the FrontendServer and N for the Workers
+- Open a new one and get the ID of the FrontendServer by enter the command "docker ps"
+- After that enter inside the container by executing the command "docker exec -it <ID_FrontendServer> bash"
+- You can perform some tests inside the folder /containernet/MaxiNet/MaxiNet/Frontend/examples/
 
 #### Project Part 2
 - 
