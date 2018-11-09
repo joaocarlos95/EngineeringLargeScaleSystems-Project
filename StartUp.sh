@@ -13,7 +13,7 @@
 	fi
 
 	docker volume create ESLE_Volume
-	docker network create --attachable -d overlay --ip-range=10.0.1.0/24 --subnet=10.0.0.0/16 ESLE_Network
+	docker network create --attachable --driver overlay --ip-range 10.0.2.0/24 --subnet 10.0.0.0/16 ESLE_Network
 	
 	#docker swarm leave --force
 	#docker swarm init --advertise-addr 172.16.75.163 > getSwarm.txt
@@ -25,24 +25,31 @@
 	#--network ESLE_Project containernet/containernet
 
 	chmod +x ~/Desktop/InstallMaxiNet.sh
+	chmod +x ~/Desktop/MakeInstall.sh
 
 	# Correr o Controlador
-	docker run -d --name 'Controler' --network ESLE_Network -it --ip 10.0.1.1 --mount source=ESLE_Volume,target=/containernet --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
+	docker run -d -it --name Controler --ip 10.0.1.1 --mount source=ESLE_Volume,target=/containernet --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock --network ESLE_Network containernet/containernet /bin/bash
 	ContainerID="$(docker ps -aqf 'name=Controler')"
 	docker cp ~/Desktop/MaxiNet.cfg "Controler":/containernet/../etc/"MaxiNet.cfg"
 	docker cp ~/Desktop/InstallMaxiNet.sh "Controler":/containernet/"InstallMaxiNet.sh"
-	gnome-terminal -x bash -c "docker exec -it '$ContainerID' ./InstallMaxiNet.sh && cd /pox/ && python2 pox.py forwarding.l2_learning"
+	docker cp ~/Desktop/MakeInstall.sh "Controler":/containernet/"MakeInstall.sh"	
+	docker exec -it "$ContainerID" ./InstallMaxiNet.sh
+	gnome-terminal -x bash -c "docker exec -it '$ContainerID' python /pox/pox.py forwarding.l2_learning"
 
 	# Correr o FrontendServer
-	docker run -d --name 'FrontendServer' --network ESLE_Network -it --ip 10.0.1.2 --mount source=ESLE_Volume,target=/containernet --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
+	docker run -d -it --name "FrontendServer" --network ESLE_Network --ip 10.0.1.2 --mount source=ESLE_Volume,target=/containernet --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
 	ContainerID="$(docker ps -aqf 'name=FrontendServer')"
-	gnome-terminal -x bash -c "docker exec -it '$ContainerID' cd /containernet/MaxiNet/ && make install && MaxiNetFront"
+	docker cp ~/Desktop/MaxiNet.cfg "FrontendServer":/containernet/../etc/"MaxiNet.cfg"
+	docker exec -it "$ContainerID" ./MakeInstall.sh
+	gnome-terminal -x bash -c "docker exec -it '$ContainerID' MaxiNetFrontendServer"
 
 	for ((i=1; ((i<=$nrWorkers)); i++)); do
 
-		docker run -d --name "Containernet-$i" --network ESLE_Network -it --mount source=ESLE_Volume,target=/containernet --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
+		docker run -d -it --name "Containernet-$i" --network ESLE_Network --mount source=ESLE_Volume,target=/containernet --rm --privileged --pid='host' -v /var/run/docker.sock:/var/run/docker.sock containernet/containernet /bin/bash
 		ContainerID="$(docker ps -aqf 'name='Containernet-$i'')"
-		gnome-terminal -x bash -c "docker exec -it '$ContainerID' cd /containernet/MaxiNet && make install"
+		docker cp ~/Desktop/MaxiNet.cfg "Containernet-$i":/containernet/../etc/"MaxiNet.cfg"
+		docker exec -it "$ContainerID" ./MakeInstall.sh
+		gnome-terminal -x bash -c "docker exec -it '$ContainerID' MaxiNetWorker"
 
 	done
 

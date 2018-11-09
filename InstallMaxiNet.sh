@@ -23,7 +23,7 @@ then
     metis="y"
     pyro="y"
 else
-    read -n1 -r -p "Do you want to install MaxiNet with Docker container support? (y/[n])" containernet
+    containernet="y"
     if [ "$containernet" == "y" ] || [ "$containernet" == "Y" ]
     then
       containernet="y"
@@ -33,7 +33,7 @@ else
       containernet="n"
       echo ""
 
-      read -n1 -r -p "Do you want to install Mininet 2.2.1rc1? ([y]/n)" mininet
+      mininet="y"
 
       if [ "$mininet" == "" ] || [ "$mininet" == "y" ] || [ "$mininet" == "Y" ]
       then
@@ -46,7 +46,7 @@ else
       echo ""
     fi
 
-    read -n1 -r -p "Do you want to install Metis 5.1? ([y]/n)" metis
+    metis="y"
 
     if [ "$metis" == "" ] || [ "$metis" == "y" ] || [ "$metis" == "Y" ]
     then
@@ -56,7 +56,7 @@ else
     fi
     echo ""
 
-    read -n1 -r -p "Do you want to install Pyro 4? ([y]/n)" pyro
+    pyro="y"
 
     if [ "$pyro" == "" ] || [ "$pyro" == "y" ] || [ "$pyro" == "Y" ]
     then
@@ -77,13 +77,11 @@ else
     echo " -MaxiNet 1.2"
     echo ""
 
-    read -n1 -r -p "Is this OK? Press ANY key to continue or CTRL+C to abort." abort
-
 fi
 
 echo "installing required dependencies."
 
-sudo apt-get install git autoconf screen cmake build-essential sysstat python-matplotlib uuid-runtime
+sudo apt-get -y install git autoconf screen cmake build-essential sysstat python-matplotlib uuid-runtime
 
 if [ "$mininet" == "y" ]
 then
@@ -110,7 +108,7 @@ then
   fi
 elif [ "$containernet" == "y" ]
 then
-  sudo apt-get install ansible aptitude
+  sudo apt-get -y install ansible aptitude
   # Patch config file if necessary
   grep "localhost ansible_connection=local" /etc/ansible/hosts >/dev/null
   if [ $? -ne 0 ]; then
@@ -144,7 +142,7 @@ fi
 
 if [ "$pyro" == "y" ]
 then
-  sudo apt-get install python-pip
+  sudo apt-get -y install python-pip
   sudo pip install Pyro4
 fi
 
