@@ -14,12 +14,14 @@ This project has 2 parts:
   
 ### How to run:
 #### Project Part 1
+- Download the project tothe Desktop of your computer
 - Open a terminal and run the command ./StartUp.sh
 - Choose the number of workers
-- After all installation, you'll have open 1 terminal for the Controller, 1 for the FrontendServer and N for the Workers
-- Open a new one and get the ID of the FrontendServer by enter the command "docker ps"
-- After that enter inside the container by executing the command "docker exec -it <ID_FrontendServer> bash"
+- After the installation, you'll have open 1 terminal for the Controller, 1 for the FrontendServer and N for the Workers
+- Open a new one and get the ID of the FrontendServer by enter the command "docker ps" and run the command "docker exec -it <ID_FrontendServer> bash"
 - You can perform some tests inside the folder /containernet/MaxiNet/MaxiNet/Frontend/examples/
 
 #### Project Part 2
 - 
+
+##### P.S. You must have docker installed on your computer
