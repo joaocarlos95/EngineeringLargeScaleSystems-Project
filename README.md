@@ -12,9 +12,10 @@ This project has 2 parts:
   1. 
   2. 
   
-### How to configure:
+### How to run:
 #### Project Part 1
-- 
+- Open a terminal and run the command ./StartUp.sh
+- Choose the number of workers
 
 #### Project Part 2
 - 
