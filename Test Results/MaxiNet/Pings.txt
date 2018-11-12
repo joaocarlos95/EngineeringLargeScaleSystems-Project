@@ -1,0 +1,60 @@
+##########################################################################################################
+# 	
+#	Results (FatTree - 100 pings)
+#
+# 	4 Workers - FatTree
+#	-------------------
+#	rtt min/avg/max/mdev = 0.602/2.239/44.448/6.457 ms
+#	rtt min/avg/max/mdev = 0.651/2.934/70.376/9.586 ms
+#	rtt min/avg/max/mdev = 0.627/3.209/72.395/10.809 ms
+#
+# 	3 Workers - FatTree
+#	-------------------
+#	rtt min/avg/max/mdev = 0.381/2.485/62.363/9.406 ms
+#	rtt min/avg/max/mdev = 0.332/2.716/72.948/10.423 ms
+#	rtt min/avg/max/mdev = 0.329/3.146/61.800/10.940 ms
+#
+# 	2 Workers - FatTree
+#	-------------------
+#	rtt min/avg/max/mdev = 0.389/2.262/55.821/7.592 ms
+#	rtt min/avg/max/mdev = 0.297/2.522/53.716/9.128 ms
+#	rtt min/avg/max/mdev = 0.371/2.731/81.291/11.577 ms
+#
+# 	1 Workers - FatTree
+#	-------------------
+#	rtt min/avg/max/mdev = 0.052/2.286/76.807/11.262 ms
+#	rtt min/avg/max/mdev = 0.065/2.319/67.965/11.127 ms
+#	rtt min/avg/max/mdev = 0.059/2.449/87.890/12.349 ms
+#
+###############################################################################################################################
+
+
+###############################################################################################################################
+# 	
+#	Results (Linear [d1-s1-s2-s3-s4-s5-d2]- 100 pings)
+#
+# 	4 Workers
+#	-------------------
+#	rtt min/avg/max/mdev = 0.104/1.863/52.237/8.313 ms (100 packets transmitted, 100 received, 0% packet loss, time 100743ms)
+#	rtt min/avg/max/mdev = 0.102/2.118/67.492/9.423 ms (100 packets transmitted, 100 received, 0% packet loss, time 100823ms)
+#	rtt min/avg/max/mdev = 0.096/2.208/65.460/10.054 ms (100 packets transmitted, 100 received, 0% packet loss, time 100823ms)
+#
+# 	3 Workers
+#	-------------------
+#	rtt min/avg/max/mdev = 0.126/1.664/41.300/6.827 ms (100 packets transmitted, 100 received, 0% packet loss, time 101181ms)
+#	rtt min/avg/max/mdev = 0.148/2.252/64.873/10.759 ms ()
+#	rtt min/avg/max/mdev = 0.329/3.146/61.800/10.940 ms
+#
+# 	2 Workers
+#	-------------------
+#	rtt min/avg/max/mdev = 0.389/2.262/55.821/7.592 ms
+#	rtt min/avg/max/mdev = 0.297/2.522/53.716/9.128 ms
+#	rtt min/avg/max/mdev = 0.371/2.731/81.291/11.577 ms
+#
+# 	1 Workers
+#	-------------------
+#	rtt min/avg/max/mdev = 0.052/2.286/76.807/11.262 ms
+#	rtt min/avg/max/mdev = 0.065/2.319/67.965/11.127 ms
+#	rtt min/avg/max/mdev = 0.059/2.449/87.890/12.349 ms
+#
+##########################################################################################################

@@ -11,17 +11,34 @@ The main objective is to analyse and test a real distributed system with client-
 This project has 2 parts:
   1. The first part consists in analyse and testing the performance and scalability of the MaxiNet System
   2. 
+
+### Repository Content
+```bash
+.
+├── InstallMaxiNet.sh
+├── MakeInstall.sh
+├── MaxiNet.cfg
+├── README.md
+├── Report.pdf
+└── Test Results
+    ├── MaxiNet
+    │   └── Pings.txt
+    └── Mininet
+        ├── Bandwidth.txt
+        ├── CPU.txt
+        └── Pings.txt
+```
   
 ### How to run:
 #### Project Part 1
-- Download the project tothe Desktop of your computer
-- Open a terminal and run the command ./StartUp.sh
+- Download the project to your computer
+- Open a terminal and run the command **`chmod +x ./StartUp.sh && ./StartUp.sh`**
 - Choose the number of workers
 - After the installation, you'll have open 1 terminal for the Controller, 1 for the FrontendServer and N for the Workers
-- Open a new one and get the ID of the FrontendServer by enter the command "docker ps" and run the command "docker exec -it <ID_FrontendServer> bash"
+- Open a new one and get the ID of the Controller by enter the command **`docker ps`** and run the command **`docker exec -it <ID_Controller> bash`**
 - You can perform some tests inside the folder /containernet/MaxiNet/MaxiNet/Frontend/examples/
 
 #### Project Part 2
 - 
 
-##### P.S. You must have docker installed on your computer
+##### P.S. You must have _docker_ installed on your computer as well _gnome-terminal_
