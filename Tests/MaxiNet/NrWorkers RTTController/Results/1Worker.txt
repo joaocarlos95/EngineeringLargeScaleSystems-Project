@@ -1,0 +1,216 @@
+root@ef76e733f410:/containernet/MaxiNet/MaxiNet/Frontend/examples# python teste.py 
+# 10.0.2.4:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.5
+# 10.0.2.4:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.5
+# 10.0.2.4:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.5
+INFO:MaxiNet.Frontend.maxinet:added worker 007e9512b348
+INFO:MaxiNet.Frontend.maxinet:Clustering topology...
+DEBUG:MaxiNet.Frontend.partitioner:metis file: /tmp/filen6ksee
+DEBUG:MaxiNet.Frontend.partitioner:60 59 011 0
+2 31 10
+2 31 10
+2 32 10
+2 32 10
+2 33 10
+2 33 10
+2 34 10
+2 34 10
+2 35 10
+2 35 10
+2 36 10
+2 36 10
+2 37 10
+2 37 10
+2 38 10
+2 38 10
+2 39 10
+2 39 10
+2 40 10
+2 40 10
+2 41 10
+2 41 10
+2 42 10
+2 42 10
+2 43 10
+2 43 10
+2 44 10
+2 44 10
+2 45 10
+2 45 10
+1 46 20 2 10 1 10
+1 46 20 4 10 3 10
+1 47 20 6 10 5 10
+1 47 20 8 10 7 10
+1 10 10 9 10 48 20
+1 12 10 11 10 48 20
+1 13 10 14 10 49 20
+1 16 10 15 10 49 20
+1 18 10 17 10 50 20
+1 50 20 19 10 20 10
+1 51 20 22 10 21 10
+1 51 20 23 10 24 10
+1 52 20 26 10 25 10
+1 52 20 27 10 28 10
+1 53 20 30 10 29 10
+1 54 40 31 20 32 20
+1 54 40 34 20 33 20
+1 55 40 35 20 36 20
+1 55 40 38 20 37 20
+1 56 40 40 20 39 20
+1 56 40 41 20 42 20
+1 57 40 44 20 43 20
+1 57 40 45 20
+1 58 80 46 40 47 40
+1 58 80 48 40 49 40
+1 59 80 51 40 50 40
+1 59 80 53 40 52 40
+1 55 80 54 80 60 160
+1 57 80 56 80 60 160
+1 59 160 58 160
+
+DEBUG:MaxiNet.Frontend.maxinet:Tunnels: []
+h1-eth0   Link encap:Ethernet  HWaddr 00:39:71:00:00:00  
+          inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
+          inet6 addr: fe80::239:71ff:fe00:0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1450  Metric:1
+          RX packets:47 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:3330 (3.3 KB)  TX bytes:1212 (1.2 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+
+h30-eth0  Link encap:Ethernet  HWaddr 00:91:f4:00:00:1d  
+          inet addr:10.0.0.30  Bcast:10.255.255.255  Mask:255.0.0.0
+          inet6 addr: fe80::291:f4ff:fe00:1d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1450  Metric:1
+          RX packets:45 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:13 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:3150 (3.1 KB)  TX bytes:1142 (1.1 KB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+
+waiting 5 seconds for routing algorithms on the controller to converge
+PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.
+64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=590 ms
+64 bytes from 10.0.0.1: icmp_seq=2 ttl=64 time=2.77 ms
+64 bytes from 10.0.0.1: icmp_seq=3 ttl=64 time=0.100 ms
+64 bytes from 10.0.0.1: icmp_seq=4 ttl=64 time=0.066 ms
+64 bytes from 10.0.0.1: icmp_seq=5 ttl=64 time=0.123 ms
+64 bytes from 10.0.0.1: icmp_seq=6 ttl=64 time=0.108 ms
+64 bytes from 10.0.0.1: icmp_seq=7 ttl=64 time=0.109 ms
+64 bytes from 10.0.0.1: icmp_seq=8 ttl=64 time=0.109 ms
+64 bytes from 10.0.0.1: icmp_seq=9 ttl=64 time=0.065 ms
+64 bytes from 10.0.0.1: icmp_seq=10 ttl=64 time=0.125 ms
+64 bytes from 10.0.0.1: icmp_seq=11 ttl=64 time=0.150 ms
+64 bytes from 10.0.0.1: icmp_seq=12 ttl=64 time=0.125 ms
+64 bytes from 10.0.0.1: icmp_seq=13 ttl=64 time=0.128 ms
+64 bytes from 10.0.0.1: icmp_seq=14 ttl=64 time=0.125 ms
+64 bytes from 10.0.0.1: icmp_seq=15 ttl=64 time=0.132 ms
+64 bytes from 10.0.0.1: icmp_seq=16 ttl=64 time=0.126 ms
+64 bytes from 10.0.0.1: icmp_seq=17 ttl=64 time=0.159 ms
+64 bytes from 10.0.0.1: icmp_seq=18 ttl=64 time=0.127 ms
+64 bytes from 10.0.0.1: icmp_seq=19 ttl=64 time=0.125 ms
+64 bytes from 10.0.0.1: icmp_seq=20 ttl=64 time=0.096 ms
+64 bytes from 10.0.0.1: icmp_seq=21 ttl=64 time=0.121 ms
+64 bytes from 10.0.0.1: icmp_seq=22 ttl=64 time=0.143 ms
+64 bytes from 10.0.0.1: icmp_seq=23 ttl=64 time=0.067 ms
+64 bytes from 10.0.0.1: icmp_seq=24 ttl=64 time=0.118 ms
+64 bytes from 10.0.0.1: icmp_seq=25 ttl=64 time=0.119 ms
+64 bytes from 10.0.0.1: icmp_seq=26 ttl=64 time=0.118 ms
+64 bytes from 10.0.0.1: icmp_seq=27 ttl=64 time=0.090 ms
+64 bytes from 10.0.0.1: icmp_seq=28 ttl=64 time=0.109 ms
+64 bytes from 10.0.0.1: icmp_seq=29 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=30 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=31 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=32 ttl=64 time=245 ms
+64 bytes from 10.0.0.1: icmp_seq=33 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=34 ttl=64 time=0.109 ms
+64 bytes from 10.0.0.1: icmp_seq=35 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=36 ttl=64 time=0.110 ms
+64 bytes from 10.0.0.1: icmp_seq=37 ttl=64 time=0.132 ms
+64 bytes from 10.0.0.1: icmp_seq=38 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=39 ttl=64 time=0.119 ms
+64 bytes from 10.0.0.1: icmp_seq=40 ttl=64 time=0.121 ms
+64 bytes from 10.0.0.1: icmp_seq=41 ttl=64 time=0.123 ms
+64 bytes from 10.0.0.1: icmp_seq=42 ttl=64 time=0.099 ms
+64 bytes from 10.0.0.1: icmp_seq=43 ttl=64 time=0.120 ms
+64 bytes from 10.0.0.1: icmp_seq=44 ttl=64 time=0.073 ms
+64 bytes from 10.0.0.1: icmp_seq=45 ttl=64 time=0.122 ms
+64 bytes from 10.0.0.1: icmp_seq=46 ttl=64 time=0.125 ms
+64 bytes from 10.0.0.1: icmp_seq=47 ttl=64 time=0.122 ms
+64 bytes from 10.0.0.1: icmp_seq=48 ttl=64 time=0.156 ms
+64 bytes from 10.0.0.1: icmp_seq=49 ttl=64 time=0.123 ms
+64 bytes from 10.0.0.1: icmp_seq=50 ttl=64 time=0.122 ms
+64 bytes from 10.0.0.1: icmp_seq=51 ttl=64 time=0.119 ms
+64 bytes from 10.0.0.1: icmp_seq=52 ttl=64 time=0.120 ms
+64 bytes from 10.0.0.1: icmp_seq=53 ttl=64 time=0.135 ms
+64 bytes from 10.0.0.1: icmp_seq=54 ttl=64 time=0.121 ms
+64 bytes from 10.0.0.1: icmp_seq=55 ttl=64 time=0.118 ms
+64 bytes from 10.0.0.1: icmp_seq=56 ttl=64 time=0.136 ms
+64 bytes from 10.0.0.1: icmp_seq=57 ttl=64 time=0.120 ms
+64 bytes from 10.0.0.1: icmp_seq=58 ttl=64 time=0.122 ms
+64 bytes from 10.0.0.1: icmp_seq=59 ttl=64 time=0.121 ms
+64 bytes from 10.0.0.1: icmp_seq=60 ttl=64 time=0.116 ms
+64 bytes from 10.0.0.1: icmp_seq=61 ttl=64 time=0.123 ms
+64 bytes from 10.0.0.1: icmp_seq=62 ttl=64 time=0.121 ms
+64 bytes from 10.0.0.1: icmp_seq=63 ttl=64 time=324 ms
+64 bytes from 10.0.0.1: icmp_seq=64 ttl=64 time=0.065 ms
+64 bytes from 10.0.0.1: icmp_seq=65 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=66 ttl=64 time=0.098 ms
+64 bytes from 10.0.0.1: icmp_seq=67 ttl=64 time=0.133 ms
+64 bytes from 10.0.0.1: icmp_seq=68 ttl=64 time=0.108 ms
+64 bytes from 10.0.0.1: icmp_seq=69 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=70 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=71 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=72 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=73 ttl=64 time=0.107 ms
+64 bytes from 10.0.0.1: icmp_seq=74 ttl=64 time=0.105 ms
+64 bytes from 10.0.0.1: icmp_seq=75 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=76 ttl=64 time=0.108 ms
+64 bytes from 10.0.0.1: icmp_seq=77 ttl=64 time=0.111 ms
+64 bytes from 10.0.0.1: icmp_seq=78 ttl=64 time=0.109 ms
+64 bytes from 10.0.0.1: icmp_seq=79 ttl=64 time=0.113 ms
+64 bytes from 10.0.0.1: icmp_seq=80 ttl=64 time=0.114 ms
+64 bytes from 10.0.0.1: icmp_seq=81 ttl=64 time=0.104 ms
+64 bytes from 10.0.0.1: icmp_seq=82 ttl=64 time=0.110 ms
+64 bytes from 10.0.0.1: icmp_seq=83 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=84 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=85 ttl=64 time=0.110 ms
+64 bytes from 10.0.0.1: icmp_seq=86 ttl=64 time=0.114 ms
+64 bytes from 10.0.0.1: icmp_seq=87 ttl=64 time=0.173 ms
+64 bytes from 10.0.0.1: icmp_seq=88 ttl=64 time=0.098 ms
+64 bytes from 10.0.0.1: icmp_seq=89 ttl=64 time=0.108 ms
+64 bytes from 10.0.0.1: icmp_seq=90 ttl=64 time=0.113 ms
+64 bytes from 10.0.0.1: icmp_seq=91 ttl=64 time=0.278 ms
+64 bytes from 10.0.0.1: icmp_seq=92 ttl=64 time=0.112 ms
+64 bytes from 10.0.0.1: icmp_seq=93 ttl=64 time=363 ms
+64 bytes from 10.0.0.1: icmp_seq=94 ttl=64 time=0.103 ms
+64 bytes from 10.0.0.1: icmp_seq=95 ttl=64 time=0.128 ms
+64 bytes from 10.0.0.1: icmp_seq=96 ttl=64 time=0.155 ms
+64 bytes from 10.0.0.1: icmp_seq=97 ttl=64 time=0.154 ms
+64 bytes from 10.0.0.1: icmp_seq=98 ttl=64 time=0.123 ms
+64 bytes from 10.0.0.1: icmp_seq=99 ttl=64 time=0.120 ms
+64 bytes from 10.0.0.1: icmp_seq=100 ttl=64 time=0.149 ms
+
+--- 10.0.0.1 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 101209ms
+rtt min/avg/max/mdev = 0.065/15.382/590.233/78.911 ms
+
+INFO:MaxiNet.Frontend.maxinet:removed worker 007e9512b348
