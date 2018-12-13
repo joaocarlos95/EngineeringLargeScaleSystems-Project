@@ -1,0 +1,315 @@
+root@36a1578137fc:/containernet/MaxiNet/MaxiNet/Frontend/examples# python t.py 
+# 10.0.2.5:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.5:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.5:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+INFO:MaxiNet.Frontend.maxinet:added worker 930eac31f0a8
+# 10.0.2.4:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.4:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.4:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+INFO:MaxiNet.Frontend.maxinet:added worker 56355ba4c430
+# 10.0.2.3:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.3:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.3:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+INFO:MaxiNet.Frontend.maxinet:added worker 4453dd92aba4
+# 10.0.2.6:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.6:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.6:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+INFO:MaxiNet.Frontend.maxinet:added worker 7ab341431693
+# 10.0.2.2:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.2:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+# 10.0.2.2:5345 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.6
+INFO:MaxiNet.Frontend.maxinet:added worker 4daccddf0268
+INFO:MaxiNet.Frontend.maxinet:Clustering topology...
+DEBUG:MaxiNet.Frontend.partitioner:metis file: /tmp/filevOlIk5
+DEBUG:MaxiNet.Frontend.partitioner:60 59 011 0
+2 31 10
+2 31 10
+2 32 10
+2 32 10
+2 33 10
+2 33 10
+2 34 10
+2 34 10
+2 35 10
+2 35 10
+2 36 10
+2 36 10
+2 37 10
+2 37 10
+2 38 10
+2 38 10
+2 39 10
+2 39 10
+2 40 10
+2 40 10
+2 41 10
+2 41 10
+2 42 10
+2 42 10
+2 43 10
+2 43 10
+2 44 10
+2 44 10
+2 45 10
+2 45 10
+1 46 20 2 10 1 10
+1 46 20 4 10 3 10
+1 47 20 6 10 5 10
+1 47 20 8 10 7 10
+1 10 10 9 10 48 20
+1 12 10 11 10 48 20
+1 13 10 14 10 49 20
+1 16 10 15 10 49 20
+1 18 10 17 10 50 20
+1 50 20 19 10 20 10
+1 51 20 22 10 21 10
+1 51 20 23 10 24 10
+1 52 20 26 10 25 10
+1 52 20 27 10 28 10
+1 53 20 30 10 29 10
+1 54 40 31 20 32 20
+1 54 40 34 20 33 20
+1 55 40 35 20 36 20
+1 55 40 38 20 37 20
+1 56 40 40 20 39 20
+1 56 40 41 20 42 20
+1 57 40 44 20 43 20
+1 57 40 45 20
+1 58 80 46 40 47 40
+1 58 80 48 40 49 40
+1 59 80 51 40 50 40
+1 59 80 53 40 52 40
+1 55 80 54 80 60 160
+1 57 80 56 80 60 160
+1 59 160 58 160
+
+DEBUG:MaxiNet.Frontend.partitioner:metis file: /tmp/file9zvDqU
+DEBUG:MaxiNet.Frontend.partitioner:0 = 0.2
+1 = 0.2
+2 = 0.2
+3 = 0.2
+4 = 0.2
+
+DEBUG:MaxiNet.Frontend.partitioner:******************************************************************************
+METIS 5.0 Copyright 1998-13, Regents of the University of Minnesota
+ (HEAD: , Built on: Dec 13 2018, 04:34:18)
+ size of idx_t: 32bits, real_t: 32bits, idx_t *: 64bits
+
+Graph Information -----------------------------------------------------------
+ Name: /tmp/filevOlIk5, #Vertices: 60, #Edges: 59, #Parts: 5
+
+Options ---------------------------------------------------------------------
+ ptype=rb, objtype=cut, ctype=shem, rtype=fm, iptype=grow
+ dbglvl=0, ufactor=1.001, no2hop=NO, minconn=NO, contig=NO, nooutput=NO
+ seed=-1, niter=10, ncuts=1
+
+Recursive Partitioning ------------------------------------------------------
+ - Edgecut: 280, communication volume: 18.
+
+ - Balance:
+     constraint #0:  1.111 out of 0.111
+
+ - Most overweight partition:
+     pid: 3, actual: 20, desired: 18, ratio: 1.11.
+
+ - Subdomain connectivity: max: 4, min: 1, avg: 2.00
+
+ - There are 3 non-contiguous partitions.
+   Total components after removing the cut edges: 10,
+   max components: 3 for pid: 1.
+
+Timing Information ----------------------------------------------------------
+  I/O:                 0.000 sec
+  Partitioning:        0.000 sec   (METIS time)
+  Reporting:           0.000 sec
+
+Memory Information ----------------------------------------------------------
+  Max memory used:       0.054 MB
+******************************************************************************
+
+DEBUG:MaxiNet.Frontend.partitioner:Topologies:
+DEBUG:MaxiNet.Frontend.partitioner:Partition 0
+DEBUG:MaxiNet.Frontend.partitioner:Nodes: ['h1', 'h2', 'h3', 'h4', 'h7', 'h8', 's1', 's2', 's3', 's4', 's7', 's8', 's31', 's32', 's34', 's46', 's47', 's54']
+DEBUG:MaxiNet.Frontend.partitioner:Links: [('h8', 's8'), ('h2', 's2'), ('s2', 's31'), ('s1', 's31'), ('h1', 's1'), ('h7', 's7'), ('h4', 's4'), ('s3', 's32'), ('s46', 's54'), ('s31', 's46'), ('h3', 's3'), ('s32', 's46'), ('s4', 's32'), ('s34', 's47'), ('s7', 's34'), ('s8', 's34'), ('s47', 's54')]
+DEBUG:MaxiNet.Frontend.partitioner:Partition 1
+DEBUG:MaxiNet.Frontend.partitioner:Nodes: ['h5', 'h6', 'h10', 'h13', 'h14', 'h15', 'h16', 's5', 's6', 's10', 's13', 's14', 's15', 's16', 's33', 's37', 's38', 's49']
+DEBUG:MaxiNet.Frontend.partitioner:Links: [('s16', 's38'), ('h13', 's13'), ('s6', 's33'), ('s5', 's33'), ('s38', 's49'), ('h10', 's10'), ('h14', 's14'), ('s37', 's49'), ('h6', 's6'), ('h5', 's5'), ('s13', 's37'), ('s15', 's38'), ('h15', 's15'), ('s14', 's37'), ('h16', 's16')]
+DEBUG:MaxiNet.Frontend.partitioner:Partition 2
+DEBUG:MaxiNet.Frontend.partitioner:Nodes: ['h11', 'h12', 'h25', 'h26', 'h27', 'h28', 's11', 's12', 's25', 's26', 's27', 's28', 's36', 's43', 's44', 's52']
+DEBUG:MaxiNet.Frontend.partitioner:Links: [('s43', 's52'), ('h28', 's28'), ('s12', 's36'), ('h25', 's25'), ('h11', 's11'), ('s11', 's36'), ('h26', 's26'), ('h27', 's27'), ('s44', 's52'), ('s26', 's43'), ('s27', 's44'), ('s25', 's43'), ('s28', 's44'), ('h12', 's12')]
+DEBUG:MaxiNet.Frontend.partitioner:Partition 3
+DEBUG:MaxiNet.Frontend.partitioner:Nodes: ['h9', 'h22', 'h29', 'h30', 's9', 's22', 's29', 's30', 's35', 's41', 's45', 's48', 's51', 's53', 's55', 's56', 's57', 's58', 's59', 's60']
+DEBUG:MaxiNet.Frontend.partitioner:Links: [('s57', 's59'), ('h9', 's9'), ('h29', 's29'), ('s45', 's53'), ('s55', 's58'), ('s9', 's35'), ('s35', 's48'), ('s30', 's45'), ('h22', 's22'), ('s22', 's41'), ('s56', 's59'), ('h30', 's30'), ('s41', 's51'), ('s53', 's57'), ('s51', 's56'), ('s29', 's45'), ('s48', 's55'), ('s59', 's60'), ('s58', 's60')]
+DEBUG:MaxiNet.Frontend.partitioner:Partition 4
+DEBUG:MaxiNet.Frontend.partitioner:Nodes: ['h17', 'h18', 'h19', 'h20', 'h21', 'h23', 'h24', 's17', 's18', 's19', 's20', 's21', 's23', 's24', 's39', 's40', 's42', 's50']
+DEBUG:MaxiNet.Frontend.partitioner:Links: [('h18', 's18'), ('h19', 's19'), ('s19', 's40'), ('s18', 's39'), ('s39', 's50'), ('h21', 's21'), ('s17', 's39'), ('h20', 's20'), ('h23', 's23'), ('h17', 's17'), ('s23', 's42'), ('s20', 's40'), ('s40', 's50'), ('s24', 's42'), ('h24', 's24')]
+DEBUG:MaxiNet.Frontend.partitioner:Tunnels: [['s54', 's58', {'delay': '0.1ms', 'bw': 80.0, 'node1': 's54', 'node2': 's58', 'port2': 1, 'port1': 3}], ['s52', 's57', {'delay': '0.1ms', 'bw': 40.0, 'node1': 's52', 'node2': 's57', 'port2': 1, 'port1': 3}], ['s50', 's56', {'delay': '0.1ms', 'bw': 40.0, 'node1': 's50', 'node2': 's56', 'port2': 1, 'port1': 3}], ['s42', 's51', {'delay': '0.1ms', 'bw': 20.0, 'node1': 's42', 'node2': 's51', 'port2': 2, 'port1': 3}], ['s49', 's55', {'delay': '0.1ms', 'bw': 40.0, 'node1': 's49', 'node2': 's55', 'port2': 2, 'port1': 3}], ['s10', 's35', {'delay': '0.1ms', 'bw': 10, 'node1': 's10', 'node2': 's35', 'port2': 2, 'port1': 2}], ['s36', 's48', {'delay': '0.1ms', 'bw': 20.0, 'node1': 's36', 'node2': 's48', 'port2': 2, 'port1': 3}], ['s33', 's47', {'delay': '0.1ms', 'bw': 20.0, 'node1': 's33', 'node2': 's47', 'port2': 1, 'port1': 3}], ['s21', 's41', {'delay': '0.1ms', 'bw': 10, 'node1': 's21', 'node2': 's41', 'port2': 1, 'port1': 2}]]
+DEBUG:MaxiNet.Frontend.maxinet:Tunnels: [['s54', 's58', {'delay': '0.1ms', 'bw': 80.0, 'node1': 's54', 'node2': 's58', 'port2': 1, 'port1': 3}], ['s52', 's57', {'delay': '0.1ms', 'bw': 40.0, 'node1': 's52', 'node2': 's57', 'port2': 1, 'port1': 3}], ['s50', 's56', {'delay': '0.1ms', 'bw': 40.0, 'node1': 's50', 'node2': 's56', 'port2': 1, 'port1': 3}], ['s42', 's51', {'delay': '0.1ms', 'bw': 20.0, 'node1': 's42', 'node2': 's51', 'port2': 2, 'port1': 3}], ['s49', 's55', {'delay': '0.1ms', 'bw': 40.0, 'node1': 's49', 'node2': 's55', 'port2': 2, 'port1': 3}], ['s10', 's35', {'delay': '0.1ms', 'bw': 10, 'node1': 's10', 'node2': 's35', 'port2': 2, 'port1': 2}], ['s36', 's48', {'delay': '0.1ms', 'bw': 20.0, 'node1': 's36', 'node2': 's48', 'port2': 2, 'port1': 3}], ['s33', 's47', {'delay': '0.1ms', 'bw': 20.0, 'node1': 's33', 'node2': 's47', 'port2': 1, 'port1': 3}], ['s21', 's41', {'delay': '0.1ms', 'bw': 10, 'node1': 's21', 'node2': 's41', 'port2': 1, 'port1': 2}]]
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.5 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun0 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.3 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun1 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.2 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun2 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.2 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun3 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.4 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun4 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.4 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun5 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.3 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun6 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.4 and 10.0.2.5
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun7 created.
+DEBUG:MaxiNet.Frontend.maxinet:invoking tunnel create commands on 10.0.2.2 and 10.0.2.6
+DEBUG:MaxiNet.Frontend.maxinet:tunnel mn_tun8 created.
+h1-eth0   Link encap:Ethernet  HWaddr 00:b0:20:00:00:00  
+          inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
+          inet6 addr: fe80::2b0:20ff:fe00:0/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1450  Metric:1
+          RX packets:98 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:11 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:7948 (7.9 KB)  TX bytes:962 (962.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+
+h30-eth0  Link encap:Ethernet  HWaddr 00:c8:2e:00:00:1d  
+          inet addr:10.0.0.30  Bcast:10.255.255.255  Mask:255.0.0.0
+          inet6 addr: fe80::2c8:2eff:fe00:1d/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1450  Metric:1
+          RX packets:58 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:9 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:4756 (4.7 KB)  TX bytes:802 (802.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+
+waiting 5 seconds for routing algorithms on the controller to converge
+PING 10.0.0.1 (10.0.0.1) 56(84) bytes of data.
+64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=176 ms
+64 bytes from 10.0.0.1: icmp_seq=2 ttl=64 time=2.49 ms
+64 bytes from 10.0.0.1: icmp_seq=3 ttl=64 time=0.680 ms
+64 bytes from 10.0.0.1: icmp_seq=4 ttl=64 time=0.698 ms
+64 bytes from 10.0.0.1: icmp_seq=5 ttl=64 time=0.895 ms
+64 bytes from 10.0.0.1: icmp_seq=6 ttl=64 time=0.338 ms
+64 bytes from 10.0.0.1: icmp_seq=7 ttl=64 time=0.516 ms
+64 bytes from 10.0.0.1: icmp_seq=8 ttl=64 time=0.475 ms
+64 bytes from 10.0.0.1: icmp_seq=9 ttl=64 time=0.691 ms
+64 bytes from 10.0.0.1: icmp_seq=10 ttl=64 time=0.689 ms
+64 bytes from 10.0.0.1: icmp_seq=11 ttl=64 time=0.688 ms
+64 bytes from 10.0.0.1: icmp_seq=12 ttl=64 time=0.718 ms
+64 bytes from 10.0.0.1: icmp_seq=13 ttl=64 time=0.694 ms
+64 bytes from 10.0.0.1: icmp_seq=14 ttl=64 time=0.764 ms
+64 bytes from 10.0.0.1: icmp_seq=15 ttl=64 time=0.503 ms
+64 bytes from 10.0.0.1: icmp_seq=16 ttl=64 time=0.507 ms
+64 bytes from 10.0.0.1: icmp_seq=17 ttl=64 time=0.688 ms
+64 bytes from 10.0.0.1: icmp_seq=18 ttl=64 time=0.611 ms
+64 bytes from 10.0.0.1: icmp_seq=19 ttl=64 time=0.479 ms
+64 bytes from 10.0.0.1: icmp_seq=20 ttl=64 time=0.685 ms
+64 bytes from 10.0.0.1: icmp_seq=21 ttl=64 time=0.691 ms
+64 bytes from 10.0.0.1: icmp_seq=22 ttl=64 time=0.695 ms
+64 bytes from 10.0.0.1: icmp_seq=23 ttl=64 time=0.690 ms
+64 bytes from 10.0.0.1: icmp_seq=24 ttl=64 time=0.699 ms
+64 bytes from 10.0.0.1: icmp_seq=25 ttl=64 time=0.910 ms
+64 bytes from 10.0.0.1: icmp_seq=26 ttl=64 time=0.679 ms
+64 bytes from 10.0.0.1: icmp_seq=27 ttl=64 time=0.678 ms
+64 bytes from 10.0.0.1: icmp_seq=28 ttl=64 time=0.627 ms
+64 bytes from 10.0.0.1: icmp_seq=29 ttl=64 time=0.520 ms
+64 bytes from 10.0.0.1: icmp_seq=30 ttl=64 time=0.798 ms
+64 bytes from 10.0.0.1: icmp_seq=31 ttl=64 time=33.2 ms
+64 bytes from 10.0.0.1: icmp_seq=32 ttl=64 time=71.7 ms
+64 bytes from 10.0.0.1: icmp_seq=33 ttl=64 time=0.804 ms
+64 bytes from 10.0.0.1: icmp_seq=34 ttl=64 time=0.687 ms
+64 bytes from 10.0.0.1: icmp_seq=35 ttl=64 time=0.604 ms
+64 bytes from 10.0.0.1: icmp_seq=36 ttl=64 time=0.688 ms
+64 bytes from 10.0.0.1: icmp_seq=37 ttl=64 time=0.608 ms
+64 bytes from 10.0.0.1: icmp_seq=38 ttl=64 time=0.747 ms
+64 bytes from 10.0.0.1: icmp_seq=39 ttl=64 time=0.718 ms
+64 bytes from 10.0.0.1: icmp_seq=40 ttl=64 time=0.584 ms
+64 bytes from 10.0.0.1: icmp_seq=41 ttl=64 time=0.611 ms
+64 bytes from 10.0.0.1: icmp_seq=42 ttl=64 time=0.686 ms
+64 bytes from 10.0.0.1: icmp_seq=43 ttl=64 time=0.683 ms
+64 bytes from 10.0.0.1: icmp_seq=44 ttl=64 time=0.718 ms
+64 bytes from 10.0.0.1: icmp_seq=45 ttl=64 time=0.648 ms
+64 bytes from 10.0.0.1: icmp_seq=46 ttl=64 time=0.540 ms
+64 bytes from 10.0.0.1: icmp_seq=47 ttl=64 time=0.685 ms
+64 bytes from 10.0.0.1: icmp_seq=48 ttl=64 time=0.610 ms
+64 bytes from 10.0.0.1: icmp_seq=49 ttl=64 time=0.690 ms
+64 bytes from 10.0.0.1: icmp_seq=50 ttl=64 time=0.687 ms
+64 bytes from 10.0.0.1: icmp_seq=51 ttl=64 time=0.477 ms
+64 bytes from 10.0.0.1: icmp_seq=52 ttl=64 time=0.676 ms
+64 bytes from 10.0.0.1: icmp_seq=53 ttl=64 time=0.692 ms
+64 bytes from 10.0.0.1: icmp_seq=54 ttl=64 time=0.338 ms
+64 bytes from 10.0.0.1: icmp_seq=55 ttl=64 time=0.598 ms
+64 bytes from 10.0.0.1: icmp_seq=56 ttl=64 time=0.498 ms
+64 bytes from 10.0.0.1: icmp_seq=57 ttl=64 time=0.681 ms
+64 bytes from 10.0.0.1: icmp_seq=58 ttl=64 time=0.721 ms
+64 bytes from 10.0.0.1: icmp_seq=59 ttl=64 time=1.64 ms
+64 bytes from 10.0.0.1: icmp_seq=60 ttl=64 time=0.885 ms
+64 bytes from 10.0.0.1: icmp_seq=61 ttl=64 time=0.626 ms
+64 bytes from 10.0.0.1: icmp_seq=62 ttl=64 time=27.9 ms
+64 bytes from 10.0.0.1: icmp_seq=63 ttl=64 time=67.1 ms
+64 bytes from 10.0.0.1: icmp_seq=64 ttl=64 time=0.689 ms
+64 bytes from 10.0.0.1: icmp_seq=65 ttl=64 time=0.617 ms
+64 bytes from 10.0.0.1: icmp_seq=66 ttl=64 time=0.606 ms
+64 bytes from 10.0.0.1: icmp_seq=67 ttl=64 time=0.752 ms
+64 bytes from 10.0.0.1: icmp_seq=68 ttl=64 time=0.700 ms
+64 bytes from 10.0.0.1: icmp_seq=69 ttl=64 time=0.695 ms
+64 bytes from 10.0.0.1: icmp_seq=70 ttl=64 time=0.726 ms
+64 bytes from 10.0.0.1: icmp_seq=71 ttl=64 time=0.658 ms
+64 bytes from 10.0.0.1: icmp_seq=72 ttl=64 time=0.691 ms
+64 bytes from 10.0.0.1: icmp_seq=73 ttl=64 time=0.621 ms
+64 bytes from 10.0.0.1: icmp_seq=74 ttl=64 time=0.686 ms
+64 bytes from 10.0.0.1: icmp_seq=75 ttl=64 time=0.688 ms
+64 bytes from 10.0.0.1: icmp_seq=76 ttl=64 time=0.691 ms
+64 bytes from 10.0.0.1: icmp_seq=77 ttl=64 time=0.691 ms
+64 bytes from 10.0.0.1: icmp_seq=78 ttl=64 time=0.716 ms
+64 bytes from 10.0.0.1: icmp_seq=79 ttl=64 time=0.687 ms
+64 bytes from 10.0.0.1: icmp_seq=80 ttl=64 time=0.741 ms
+64 bytes from 10.0.0.1: icmp_seq=81 ttl=64 time=0.703 ms
+64 bytes from 10.0.0.1: icmp_seq=82 ttl=64 time=0.693 ms
+64 bytes from 10.0.0.1: icmp_seq=83 ttl=64 time=0.691 ms
+64 bytes from 10.0.0.1: icmp_seq=84 ttl=64 time=0.676 ms
+64 bytes from 10.0.0.1: icmp_seq=85 ttl=64 time=0.706 ms
+64 bytes from 10.0.0.1: icmp_seq=86 ttl=64 time=0.630 ms
+64 bytes from 10.0.0.1: icmp_seq=87 ttl=64 time=0.608 ms
+64 bytes from 10.0.0.1: icmp_seq=88 ttl=64 time=0.567 ms
+64 bytes from 10.0.0.1: icmp_seq=89 ttl=64 time=0.715 ms
+64 bytes from 10.0.0.1: icmp_seq=90 ttl=64 time=0.540 ms
+64 bytes from 10.0.0.1: icmp_seq=91 ttl=64 time=0.605 ms
+64 bytes from 10.0.0.1: icmp_seq=92 ttl=64 time=63.5 ms
+64 bytes from 10.0.0.1: icmp_seq=93 ttl=64 time=0.695 ms
+64 bytes from 10.0.0.1: icmp_seq=94 ttl=64 time=202 ms
+64 bytes from 10.0.0.1: icmp_seq=95 ttl=64 time=0.423 ms
+64 bytes from 10.0.0.1: icmp_seq=96 ttl=64 time=0.634 ms
+64 bytes from 10.0.0.1: icmp_seq=97 ttl=64 time=0.748 ms
+64 bytes from 10.0.0.1: icmp_seq=98 ttl=64 time=0.537 ms
+64 bytes from 10.0.0.1: icmp_seq=99 ttl=64 time=0.704 ms
+64 bytes from 10.0.0.1: icmp_seq=100 ttl=64 time=0.700 ms
+
+--- 10.0.0.1 ping statistics ---
+100 packets transmitted, 100 received, 0% packet loss, time 100894ms
+rtt min/avg/max/mdev = 0.338/7.066/202.958/28.788 ms
+
+INFO:MaxiNet.Frontend.maxinet:removed worker 930eac31f0a8
+INFO:MaxiNet.Frontend.maxinet:removed worker 56355ba4c430
+INFO:MaxiNet.Frontend.maxinet:removed worker 4453dd92aba4
+INFO:MaxiNet.Frontend.maxinet:removed worker 7ab341431693
+INFO:MaxiNet.Frontend.maxinet:removed worker 4daccddf0268
